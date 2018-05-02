@@ -15,8 +15,9 @@ body {
   background-color: #f3f3ee; }
 
 .container {
-  background-color: #f3f3ee;
-  max-width: none !important; }
+  background-color: yellow;
+  border: 1px solid black;
+  max-width: 880px !important; }
 
 .category-tag {
   color: #828282;
@@ -41,12 +42,10 @@ body {
 
 .standard-3-column-section {
   margin-top: 4rem; }
-  .standard-3-column-section h3 {
-    margin-left: -1rem; }
-    .standard-3-column-section h3::after {
-      content: ">";
-      font-size: 2.1rem;
-      font-weight: bold; }
+  .standard-3-column-section h3::after {
+    content: ">";
+    font-size: 2.1rem;
+    font-weight: bold; }
   .standard-3-column-section div div {
     padding-left: 5px;
     padding-right: 5px; }
@@ -62,13 +61,45 @@ body {
       .standard-3-column-section div div a div h5 {
         clear: both; }
 
+.row-container div {
+  margin: 0 auto;
+  max-width: 880px;
+  padding-left: 1px;
+  padding-right: 1px; }
+
+.row-container .test {
+  max-width: 880px;
+  margin: 0 auto; }
+
+#local-news {
+  clear: both; }
+
+#news-headlines {
+  float: none; }
+
+#sports-headlines {
+  float: none; }
+
 .footer {
-  height: 400px;
   background-color: #4c4c4c;
   color: white; }
   .footer .white-area {
     background-color: white;
     color: black;
     height: 200px; }
+  .footer .actual-footer div ul {
+    list-style-type: none; }
+    .footer .actual-footer div ul li {
+      background-color: red;
+      border-right: 1px solid white;
+      display: inline-flex;
+      width: 14rem; }
+
+@media only screen and (min-width: 992px) {
+  #news-headlines {
+    float: left; }
+
+  #sports-headlines {
+    float: right; } }
 
 /*# sourceMappingURL=index.css.map */
