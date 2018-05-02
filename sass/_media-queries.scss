@@ -1,9 +1,79 @@
-@media only screen and (min-width:768px) {
+
+@media only screen and (min-width:360px) {
 
 }
+
+@media only screen and (min-width:576px) {
+
+}
+
 
 
 @media only screen and (min-width: 992px) {
   #news-headlines{float: left;}
   #sports-headlines{float: right;}
+}
+//992px - 172px
+//576px - 290px
+
+
+//Footer Media Queries
+@media only screen and (max-width:400px) {
+  .footer {
+    .actual-footer{
+      div{
+        ul{
+          li{
+
+            //width: 18rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width:400px) {
+  .footer {
+    .actual-footer{
+      div{
+        ul{
+          li{
+            flex: 1 0 33%;
+            //width: 12rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width:600px) {
+  .footer {
+    .actual-footer{
+      div{
+        ul{
+          li{
+            //width: 13rem;
+            flex: 1 0 25%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width:992px) {
+  .footer {
+    .actual-footer{
+      div{
+        ul{
+          li{
+            flex: 1 0 15%;
+            //width: 13rem;
+          }
+        }
+      }
+    }
+  }
 }

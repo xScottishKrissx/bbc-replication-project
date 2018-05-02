@@ -87,13 +87,25 @@ body {
     background-color: white;
     color: black;
     height: 200px; }
-  .footer .actual-footer div ul {
-    list-style-type: none; }
-    .footer .actual-footer div ul li {
-      background-color: red;
-      border-right: 1px solid white;
-      display: inline-flex;
-      width: 14rem; }
+  .footer .actual-footer {
+    margin: 0; }
+    .footer .actual-footer div {
+      padding-left: 0px;
+      padding-right: 0px; }
+      .footer .actual-footer div ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        padding-left: 5px;
+        padding-right: 5px;
+        list-style-type: none;
+        margin: 0 auto;
+        max-width: 880px; }
+        .footer .actual-footer div ul li {
+          flex: 1 0 50%;
+          border-right: 1px solid white;
+          display: inline-flex;
+          padding: 5px; }
 
 @media only screen and (min-width: 992px) {
   #news-headlines {
@@ -101,5 +113,14 @@ body {
 
   #sports-headlines {
     float: right; } }
+@media only screen and (min-width: 400px) {
+  .footer .actual-footer div ul li {
+    flex: 1 0 33%; } }
+@media only screen and (min-width: 600px) {
+  .footer .actual-footer div ul li {
+    flex: 1 0 25%; } }
+@media only screen and (min-width: 992px) {
+  .footer .actual-footer div ul li {
+    flex: 1 0 15%; } }
 
 /*# sourceMappingURL=index.css.map */

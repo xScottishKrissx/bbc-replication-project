@@ -2,9 +2,13 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
+*{
+    //border: 1px solid black;
+}
 a {
   color: black;
   font-family: Helvetica,Arial,freesans,sans-serif;
+
 }
 
 h1,h2 {
@@ -24,7 +28,7 @@ body{
 .container {
   background-color: yellow;
   border: 1px solid black;
-  max-width: 880px !important;
+  max-width: $max-content-width !important;
 }
 
 .category-tag{
@@ -69,14 +73,14 @@ body{
 .row-container{
   div{
     margin: 0 auto;
-    max-width: 880px;
+    max-width: $max-content-width;
     padding-left: 1px;
     padding-right: 1px;
   }
 }
 .row-container{
   .test{
-    max-width: 880px;
+    max-width: $max-content-width;
     margin: 0 auto;
     div{
 
@@ -99,16 +103,27 @@ body{
     height: 200px;
 
   }
-  .actual-footer
-  {
+  .actual-footer{
+    margin: 0;
     div{
+      padding-left: 0px;
+      padding-right: 0px;
       ul{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        padding-left: 5px;
+        padding-right: 5px;
         list-style-type: none;
+        margin: 0 auto;
+        max-width: $max-content-width;
         li{
-          background-color: red;
+          flex: 1 0 50%;
+          //background-color: red;
           border-right: 1px solid white;
           display: inline-flex;
-          width: 14rem;
+          padding: 5px;
+          //width: 17rem;
         }
       }
     }
