@@ -32,3 +32,27 @@
     }
   }
 }
+
+@mixin footer-format {
+  margin: 0;
+  div{
+    padding-left: 0px;
+    padding-right: 0px;
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      padding-left: 5px;
+      padding-right: 5px;
+      list-style-type: none;
+      margin: 0 auto;
+      max-width: $max-content-width;
+      li{
+        flex: 1 0 50%;
+        border-right: 1px solid white;
+        display: inline-flex;
+        padding: 5px;        
+      }
+    }
+  }
+}

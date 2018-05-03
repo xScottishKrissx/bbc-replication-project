@@ -14,6 +14,34 @@ img {
 body {
   background-color: #f3f3ee; }
 
+.nav {
+  max-width: 880px;
+  margin: 0 auto;
+  position: relative; }
+  .nav .brand, .nav .profile, .nav .alerts, .nav .search {
+    height: 3rem;
+    padding: 1rem; }
+  .nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    height: 3rem;
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    width: 43%; }
+  .nav li a {
+    display: block;
+    padding: 1rem 0.5rem;
+    text-decoration: none;
+    white-space: nowrap; }
+  .nav.open ul {
+    display: block;
+    height: auto; }
+  .nav .x {
+    cursor: pointer;
+    height: 3rem;
+    padding: 1rem; }
+
 .container {
   background-color: yellow;
   border: 1px solid black;
@@ -87,6 +115,17 @@ body {
     background-color: white;
     color: black;
     height: 200px; }
+  .footer .blocks {
+    background-image: url("../assets/img/background-footer.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 880px;
+    margin: 0 auto; }
+    .footer .blocks div {
+      background-color: #383838;
+      padding-left: 8px;
+      padding-right: 8px; }
   .footer .actual-footer {
     margin: 0; }
     .footer .actual-footer div {
@@ -106,6 +145,32 @@ body {
           border-right: 1px solid white;
           display: inline-flex;
           padding: 5px; }
+  .footer .bottom-links {
+    margin: 0; }
+    .footer .bottom-links div {
+      padding-left: 0px;
+      padding-right: 0px; }
+      .footer .bottom-links div ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        padding-left: 5px;
+        padding-right: 5px;
+        list-style-type: none;
+        margin: 0 auto;
+        max-width: 880px; }
+        .footer .bottom-links div ul li {
+          flex: 1 0 50%;
+          border-right: 1px solid white;
+          display: inline-flex;
+          padding: 5px; }
+    .footer .bottom-links div ul li {
+      border: none;
+      flex: 1 0 50%;
+      font-size: 1.3rem; }
+  .footer p {
+    margin: 0 auto;
+    max-width: 880px; }
 
 @media only screen and (min-width: 992px) {
   #news-headlines {
@@ -115,12 +180,16 @@ body {
     float: right; } }
 @media only screen and (min-width: 400px) {
   .footer .actual-footer div ul li {
+    flex: 1 0 33%; }
+  .footer .bottom-links div ul li {
     flex: 1 0 33%; } }
 @media only screen and (min-width: 600px) {
   .footer .actual-footer div ul li {
     flex: 1 0 25%; } }
 @media only screen and (min-width: 992px) {
   .footer .actual-footer div ul li {
-    flex: 1 0 15%; } }
+    flex: 1 0 15%; }
+  .footer .bottom-links div ul {
+    display: block; } }
 
 /*# sourceMappingURL=index.css.map */

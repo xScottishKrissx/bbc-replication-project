@@ -24,7 +24,6 @@
       div{
         ul{
           li{
-
             //width: 18rem;
           }
         }
@@ -40,6 +39,15 @@
           li{
             flex: 1 0 33%;
             //width: 12rem;
+          }
+        }
+      }
+    }
+    .bottom-links{
+      div{
+        ul{
+          li{
+            flex: 1 0 33%;
           }
         }
       }
@@ -72,6 +80,13 @@
             flex: 1 0 15%;
             //width: 13rem;
           }
+        }
+      }
+    }
+    .bottom-links{
+      div{
+        ul{
+          display: block;
         }
       }
     }

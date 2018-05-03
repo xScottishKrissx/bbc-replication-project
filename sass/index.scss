@@ -23,6 +23,56 @@ img {
 body{
   background-color: $grey;
 }
+.nav{
+  max-width: 880px;
+  margin: 0 auto;
+  position: relative;
+  .brand, .profile, .alerts, .search{height: 3rem; padding: 1rem;}
+
+
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    height: 3rem;
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    width: 43%;
+
+  }
+  li{
+    a{
+      display: block;
+      padding: 1rem 0.5rem;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+  }
+  &.open{
+    ul{
+      display: block;
+      height: auto;
+    }
+  }
+  .x{
+    cursor: pointer;
+    height: 3rem;
+    padding: 1rem;
+  //  position: absolute;
+  //  right:0.75rem;
+  //  top: 0.75rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 .container {
@@ -30,6 +80,11 @@ body{
   border: 1px solid black;
   max-width: $max-content-width !important;
 }
+
+
+
+
+
 
 .category-tag{
   color: rgb(130, 130, 130);
@@ -103,30 +158,35 @@ body{
     height: 200px;
 
   }
-  .actual-footer{
-    margin: 0;
+  .blocks{
+    background-image: url("../assets/img/background-footer.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    max-width: $max-content-width;
+    margin: 0 auto;
     div{
-      padding-left: 0px;
-      padding-right: 0px;
+      background-color: #383838;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+  .actual-footer{
+    @include footer-format;
+  }
+  .bottom-links{
+    @include footer-format;
+    div{
       ul{
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0;
-        padding-left: 5px;
-        padding-right: 5px;
-        list-style-type: none;
-        margin: 0 auto;
-        max-width: $max-content-width;
         li{
+          border:none;
           flex: 1 0 50%;
-          //background-color: red;
-          border-right: 1px solid white;
-          display: inline-flex;
-          padding: 5px;
-          //width: 17rem;
+          font-size: 1.3rem;
         }
       }
     }
   }
+  p{margin: 0 auto; max-width: 880px;}
 }
 @import "_media-queries.scss";
