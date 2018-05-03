@@ -24,10 +24,19 @@ body{
   background-color: $grey;
 }
 .nav{
+  border: 1px solid black;
   max-width: 880px;
   margin: 0 auto;
   position: relative;
-  .brand, .profile, .alerts, .search{height: 3rem; padding: 1rem;}
+
+  .brand, .profile, .alerts, .search{
+    border-right: 1px solid black;
+    height: 3rem;
+    padding: 1rem;
+  }
+  .brand{
+
+  }
 
 
   ul{
@@ -35,12 +44,14 @@ body{
     flex-wrap: wrap;
     height: 3rem;
     list-style: none;
+    max-width: 93px;
     overflow: hidden;
     padding: 0;
     width: 43%;
 
   }
   li{
+    border-right: 1px solid black;
     a{
       display: block;
       padding: 1rem 0.5rem;
@@ -55,17 +66,33 @@ body{
     }
   }
   .x{
+    border-right: 1px solid black;
     cursor: pointer;
     height: 3rem;
     padding: 1rem;
+    position: relative;
+    span{
+      bottom: 0;
+      position: absolute;
+      right: 0;
+      top: 1.5rem;
+
+    }
   //  position: absolute;
   //  right:0.75rem;
   //  top: 0.75rem;
   }
+  .search{
+    height: 100%;
+  }
 }
 
 
+.weather-bar{
+  background-color:white;
+  height: 10rem;
 
+}
 
 
 

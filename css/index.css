@@ -15,10 +15,12 @@ body {
   background-color: #f3f3ee; }
 
 .nav {
+  border: 1px solid black;
   max-width: 880px;
   margin: 0 auto;
   position: relative; }
   .nav .brand, .nav .profile, .nav .alerts, .nav .search {
+    border-right: 1px solid black;
     height: 3rem;
     padding: 1rem; }
   .nav ul {
@@ -26,21 +28,37 @@ body {
     flex-wrap: wrap;
     height: 3rem;
     list-style: none;
+    max-width: 93px;
     overflow: hidden;
     padding: 0;
     width: 43%; }
-  .nav li a {
-    display: block;
-    padding: 1rem 0.5rem;
-    text-decoration: none;
-    white-space: nowrap; }
+  .nav li {
+    border-right: 1px solid black; }
+    .nav li a {
+      display: block;
+      padding: 1rem 0.5rem;
+      text-decoration: none;
+      white-space: nowrap; }
   .nav.open ul {
     display: block;
     height: auto; }
   .nav .x {
+    border-right: 1px solid black;
     cursor: pointer;
     height: 3rem;
-    padding: 1rem; }
+    padding: 1rem;
+    position: relative; }
+    .nav .x span {
+      bottom: 0;
+      position: absolute;
+      right: 0;
+      top: 1.5rem; }
+  .nav .search {
+    height: 100%; }
+
+.weather-bar {
+  background-color: white;
+  height: 10rem; }
 
 .container {
   background-color: yellow;
@@ -179,6 +197,9 @@ body {
   #sports-headlines {
     float: right; } }
 @media only screen and (min-width: 400px) {
+  .nav ul {
+    max-width: none; }
+
   .footer .actual-footer div ul li {
     flex: 1 0 33%; }
   .footer .bottom-links div ul li {
