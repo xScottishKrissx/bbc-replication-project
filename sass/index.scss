@@ -24,6 +24,7 @@ body{
   background-color: $grey;
 }
 .nav{
+  background-color: $white;
   border: 1px solid black;
   height: 4rem;
   max-width: 880px;
@@ -40,9 +41,7 @@ body{
     padding-top: 1rem;
 
   }
-  .brand{
 
-  }
 
 
   ul{
@@ -57,10 +56,20 @@ body{
   //width: 50px;
 
   }
+  .close-menu{
+    height: auto;
+    display: none;
+  }
   li{
-    border-right: 1px solid black;
+    //border-right: 1px solid black;
     text-align: center;
     width: 60px;
+    &:hover{
+      background-color: #333;
+      a{
+        color: $white;
+      }
+    }
     a{
       display: block;
       padding: 1rem 0.5rem;
@@ -70,11 +79,34 @@ body{
   }
   &.open{
     ul{
-      background-color: red;
-      display: inline-flex;
+      background-color: $white;
+      border-bottom: 10px solid #333;
+      display: block;
+      //height: 36rem;
       height: auto;
+      position: absolute;
+      top: 0;
       width: 100%;
       z-index: 10000;
+      //transition: all 1s;
+      .close-menu{
+        background-color: black;
+        color: white;
+        display: block;
+        width: 100%;
+        a{color: white;}
+      }
+      li{
+        float: left;
+        padding: 1rem;
+        width: 50%;
+        &:hover{
+          background-color: #333;
+          a{
+            color: $white;
+          }
+        }
+      }
     }
   }
   .x{
@@ -83,6 +115,10 @@ body{
     //height: 3rem;
     padding: 1rem;
     position: relative;
+    transition: all 1s;
+    &:hover{
+      border-bottom: 5px solid #333;
+    }
     span{
       // bottom: 0;
       // position: absolute;
@@ -96,6 +132,48 @@ body{
   }
   .search{
     height: 100%;
+    cursor: pointer;
+
+    .live-search-list{display: block;
+    width: 100%;}
+    .search-box{
+      display: none;
+      border:none;
+
+    }
+  }
+  .change-icon{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 3.8rem;
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    top: 5rem;
+    padding-top: 1rem;
+    outline: 1px solid #333;
+  }
+  .expand-search{
+    background-color: #333;
+    color: white;
+    display: block !important;
+    height: 3.8rem;
+    left: 0;
+    padding-right: 2rem;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100% ;
+
+  }
+  .move-search{
+    background-color: red;
+
+    position: absolute;
+    top: 40rem;
+    width: 100%;
+    z-index: 100;
   }
 }
 

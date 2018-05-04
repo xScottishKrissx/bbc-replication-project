@@ -1,4 +1,4 @@
-@media only screen and (max-width:360px) {
+@media only screen and (max-width:453px) {
   .nav{
     ul{
       width: 0%;
@@ -12,12 +12,38 @@
 @media only screen and (min-width:576px) {
 
 }
+@media only screen and (min-width:768px) {
+  .nav{
+    ul{width: 48%;}
+    &.open{
+      ul{
+        li{
+          width: 33%;
+        }
+      }
+    }
+    .search{
+      padding: 0;
 
+      .glyphicon-search{display: none;}
+      .search-box{display: block; height: 100%; width: 100%;}
+    }
+  }
+}
 
 
 @media only screen and (min-width: 992px) {
   #news-headlines{float: left;}
   #sports-headlines{float: right;}
+
+  .nav{
+    //.ul{width: 55%;}
+    .search{
+      min-width: 173px;
+      width: 100%;
+      max-width: 234.8px;
+    }
+  }
 }
 //992px - 172px
 //576px - 290px
