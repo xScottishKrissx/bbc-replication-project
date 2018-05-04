@@ -1,4 +1,10 @@
-
+@media only screen and (max-width:360px) {
+  .nav{
+    ul{
+      width: 0%;
+    }
+  }
+}
 @media only screen and (min-width:360px) {
 
 }
@@ -18,6 +24,7 @@
 
 
 //Footer Media Queries
+
 @media only screen and (max-width:400px) {
   .footer {
     .actual-footer{

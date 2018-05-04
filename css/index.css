@@ -16,43 +16,44 @@ body {
 
 .nav {
   border: 1px solid black;
+  height: 4rem;
   max-width: 880px;
   margin: 0 auto;
   position: relative; }
   .nav .brand, .nav .profile, .nav .alerts, .nav .search {
     border-right: 1px solid black;
-    height: 3rem;
-    padding: 1rem; }
+    height: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem; }
   .nav ul {
     display: flex;
     flex-wrap: wrap;
-    height: 3rem;
+    height: 3.8rem;
     list-style: none;
-    max-width: 93px;
     overflow: hidden;
     padding: 0;
     width: 43%; }
   .nav li {
-    border-right: 1px solid black; }
+    border-right: 1px solid black;
+    text-align: center;
+    width: 60px; }
     .nav li a {
       display: block;
       padding: 1rem 0.5rem;
       text-decoration: none;
       white-space: nowrap; }
   .nav.open ul {
-    display: block;
-    height: auto; }
+    background-color: red;
+    display: inline-flex;
+    height: auto;
+    width: 100%;
+    z-index: 10000; }
   .nav .x {
     border-right: 1px solid black;
     cursor: pointer;
-    height: 3rem;
     padding: 1rem;
     position: relative; }
-    .nav .x span {
-      bottom: 0;
-      position: absolute;
-      right: 0;
-      top: 1.5rem; }
   .nav .search {
     height: 100%; }
 
@@ -190,6 +191,9 @@ body {
     margin: 0 auto;
     max-width: 880px; }
 
+@media only screen and (max-width: 360px) {
+  .nav ul {
+    width: 0%; } }
 @media only screen and (min-width: 992px) {
   #news-headlines {
     float: left; }
