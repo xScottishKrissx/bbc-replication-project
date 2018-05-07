@@ -23,37 +23,40 @@ img {
 body{
   background-color: $grey;
 }
+
+/******************************************************************************/
+/////////////////////////////// NAVBAR /////////////////////////////////////////
+/******************************************************************************/
+
+.nav-wrapper{background-color:$white; border-bottom: 1px solid #ccc;}
 .nav{
   background-color: $white;
-  border: 1px solid black;
+  //border-bottom: 1px solid black;
   height: 4rem;
   max-width: 880px;
   margin: 0 auto;
   position: relative;
 
   .brand, .profile, .alerts, .search{
-    border-right: 1px solid black;
+    border-right: 1px solid #ccc;
     //height: 3rem;
     height: 100%;
     //padding: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 1rem;
-
   }
-
-
 
   ul{
     display: flex;
     flex-wrap: wrap;
-    height: 3.8rem;
+    height: 3.99rem;
     list-style: none;
     //max-width: 93px;
     overflow: hidden;
     padding: 0;
     width: 43%;
-  //width: 50px;
+    //width: 50px;
 
   }
   .close-menu{
@@ -63,7 +66,7 @@ body{
   li{
     //border-right: 1px solid black;
     text-align: center;
-    width: 60px;
+    width: 58px;
     &:hover{
       background-color: #333;
       a{
@@ -110,7 +113,7 @@ body{
     }
   }
   .x{
-    border-right: 1px solid black;
+    border-right: 1px solid #ccc;
     cursor: pointer;
     //height: 3rem;
     padding: 1rem;
@@ -130,17 +133,33 @@ body{
   //  right:0.75rem;
   //  top: 0.75rem;
   }
+
+/******************************************************************************/
+/////////////////////////////// NAV > SEARCH BAR////////////////////////////////
+/******************************************************************************/
   .search{
-    height: 100%;
+    border:none;
     cursor: pointer;
+    height: 100%;
+
+
+
 
     .live-search-list{display: block;
     width: 100%;}
     .search-box{
-      display: none;
       border:none;
-
+      display: none;
+      padding-left: 1rem;
+      &:focus{outline: none;}
     }
+    .oi-magnifying-glass{
+      height: 100%;
+      position: absolute;
+      font-size: 2rem;
+      padding-top: 1rem;
+    }
+
   }
   .change-icon{
     position: absolute;
@@ -176,12 +195,81 @@ body{
     z-index: 100;
   }
 }
+.search-message{
+  border-bottom: 1px solid #333;
+  display: none;
+  padding: 1rem;
+  position: absolute;
+  width: 23%;
+}
+/******************************************************************************/
+/////////////////////////////// NAV > MOBILE SEARCH ////////////////////////////
+/******************************************************************************/
+.mobile-search{
+  background-color: #333;
+  cursor: default;
+  display: table;
+  height: 20rem;
+  left: 0;
+  margin: 0 auto;
+  max-width:$max-content-width;
+  position: absolute;
+  top: -50rem;
+  width: 100%;
+  z-index: 10000;
 
+  transition: top 0.25s;
 
+  .mobile-search-inner-container{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+
+    .mobile-search-input{
+      border: 0;
+      font-size: 3rem;
+      height: 10rem;
+      padding: 0;
+      text-align: center;
+      width: 90%;
+    }
+    .submit-mobile-search{
+      border:0;
+      height: 4rem;
+      padding: 0;
+      width: 90%;
+    }
+  }
+}
+.toggle-mobile-search{
+  top: 4rem;
+}
+/******************************************************************************/
+/////////////////////////////// WEATHER //// ///////////////////////////////////
+/******************************************************************************/
 .weather-bar{
   background-color:white;
   height: 10rem;
+  margin-bottom: 2rem;
 
+  .row{
+    height: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    .title{
+      display: none;
+      h1{
+        font-size: 2rem;
+        padding-top: 1rem;
+        margin-top: 0;
+      }
+      h3{
+        line-height: 0rem;
+      }
+
+    }
+  //  :nth-child(2){background-color: blue;}
+  }
 }
 
 
@@ -191,17 +279,15 @@ body{
 
 
 
+/******************************************************************************/
+/////////////////////////////// MAIN CONTENT ///////////////////////////////////
+/******************************************************************************/
 
 .container {
   background-color: yellow;
   border: 1px solid black;
   max-width: $max-content-width !important;
 }
-
-
-
-
-
 
 .category-tag{
   color: rgb(130, 130, 130);
@@ -242,6 +328,7 @@ body{
 .standard-3-column-section{
   @include standard-3-column-section;
 }
+
 .row-container{
   div{
     margin: 0 auto;
@@ -262,9 +349,23 @@ body{
 #local-news{clear: both;}
 #news-headlines{float: none;}
 #sports-headlines{float: none;}
+#technology-news{
+  div{
+    a{
+      div{
+        img{
+          width: 100%;
+          max-width: none;
+        }
+      }
+    }
+  }
+}
 
 
-
+/******************************************************************************/
+/////////////////////////////// FOOTER /////////////////////////////////////////
+/******************************************************************************/
 .footer{
   //height: 400px;
   background-color: #4c4c4c;

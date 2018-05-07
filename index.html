@@ -8,7 +8,10 @@
 
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+    <link href="css/open-iconic-bootstrap.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <link rel="stylesheet" href="css/index.css">
     <title>Hello, world!</title>
@@ -16,58 +19,92 @@
   <body>
 
 
-      <div class="nav">
+      <div class="nav-wrapper">
 
-        <div class="brand "><a href=""><img src="assets/graphics/logo.svg" /></a></div>
-        <div class="profile"><a href="">P</a></div>
-        <div class="alerts"><a href="">A</a></div>
+        <div class="nav">
+          <div class="brand "><a href=""><img src="assets/graphics/logo.svg" /></a></div>
+          <div class="profile"><a href="">P</a></div>
+          <div class="alerts"><a href="">A</a></div>
 
-        <ul>
-          <li class="close-menu"><a href="#" >Close</a></li>
-          <li><a href="">Home</a></li>
-          <li><a href="">News</a></li>
-          <li><a href="">Sport</a></li>
-          <li><a href="">Weather</a></li>
-          <li><a href="">iPlayer</a></li>
-          <li><a href="">TV</a></li>
-          <li><a href="">Radio</a></li>
-          <li><a href="">CBBC</a></li>
-          <li><a href="">CBeebies</a></li>
-          <li><a href="">Food</a></li>
-          <li><a href="">Bitesize</a></li>
-          <li><a href="">Music</a></li>
-          <li><a href="">Earth</a></li>
-          <li><a href="">Arts</a></li>
-          <li><a href="">Make it Digital</a></li>
-          <li><a href="">Taster</a></li>
-          <li><a href="">Local</a></li>
-          <li><a href="">Tommorow's World</a></li>
-        </ul>
-          <div class="x">
-            <span>Menu</span>
-            <!-- <span>&#129171;</span> -->
-          </div>
-          <div class="search">
-            <span class="glyphicon glyphicon-search"></span>
+          <ul>
+            <li class="close-menu"><a href="#" >Close</a></li>
+            <li><a href="">Home</a></li>
+            <li><a href="">News</a></li>
+            <li><a href="">Sport</a></li>
+            <li><a href="">Weather</a></li>
+            <li><a href="">iPlayer</a></li>
+            <li><a href="">TV</a></li>
+            <li><a href="">Radio</a></li>
+            <li><a href="">CBBC</a></li>
+            <li><a href="">CBeebies</a></li>
+            <li><a href="">Food</a></li>
+            <li><a href="">Bitesize</a></li>
+            <li><a href="">Music</a></li>
+            <li><a href="">Earth</a></li>
+            <li><a href="">Arts</a></li>
+            <li><a href="">Make it Digital</a></li>
+            <li><a href="">Taster</a></li>
+            <li><a href="">Local</a></li>
+            <li><a href="">Tommorow's World</a></li>
+          </ul>
+            <div class="x">
+              <span>Menu</span>
+              <!-- <span>&#129171;</span> -->
+            </div>
+            <div class="search ">
+            <!--  <span class="oi oi-magnifying-glass"></span> -->
+            <div>
+              <span  class="oi oi-magnifying-glass"></span>
+            </div>
 
-            <input class="live-search-box search-box" type="text" placeholder="Search..">
+              <input class="live-search-box search-box" type="text" placeholder="Search..">
 
-          <!--  <ul class="live-search-list">
-              <li>Lorem</li>
-              <li>ipsum</li>
-              <li>dolor</li>
-              <li>sit</li>
-              <li>amet</li>
-            </ul> -->
+            <!--  <ul class="live-search-list">
+                <li>Lorem</li>
+                <li>ipsum</li>
+                <li>dolor</li>
+                <li>sit</li>
+                <li>amet</li>
+              </ul> -->
 
-          </div>
+            <div class="search-message">
+              <p>This is what live search might look like...</p>
+
+            </div>
+
+            <div class="mobile-search">
+              <div class="mobile-search-inner-container">
+                <!-- <p>Hello This is the mobile search thing</p> -->
+                <input class="mobile-search-input" type="text" name=" " placeholder="What are you looking for?" value="">
+                <input class="submit-mobile-search" type="submit" name="" value="Search...">
+              </div>
+
+            </div>
+            </div>
+        </div>
+
         </div>
 
       </div>
 
 
       <div class="weather-bar">
-        <p>weather</p>
+        <div class="row">
+          <div class="col-6 title">
+            <h1>Welcome to the BBC</h1>
+            <h3>Monday 7th May</h3>
+          </div>
+
+          <div class="col-12 col-sm-6 widget">
+
+            <a class="weatherwidget-io" href="https://forecast7.com/en/55d86n4d25/glasgow/" data-label_1="GLASGOW" data-label_2="" data-mode="Current" data-theme="original" data-basecolor="#ffffff" data-shadow="rgba(255, 0, 0, 0)" data-accent="#ffffff" data-textcolor="#000000" data-highcolor="#000000" data-lowcolor="#000000" data-mooncolor="#000000" >GLASGOW WEATHER</a>
+            <script>
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+            </script>
+
+
+          </div>
+        </div>
       </div>
 
 
@@ -354,38 +391,38 @@
 
 
 
-    <!-- Full Width test  -->
+    <!-- Technology News  -->
     <div class="row-container">
-      <div class="standard-3-column-section" id="">
-        <h3>Football news</h3>
+      <div class="standard-3-column-section" id="technology-news">
+        <h3>Technology news</h3>
         <div class="row">
 
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-6">
             <a href="#">
               <div class="">
-                <img src="assets/img/salah.jpg" alt="">
-                <h2>Salah is football writers' Football of the year</h2>
-                <h5 class="category-tag">Football</h5>
+                <img src="assets/img/cambridge.jpg" alt="">
+                <h2>Cambridge Analytica told to give up data</h2>
+                <h5 class="category-tag">Technology</h5>
               </div>
             </a>
           </div>
 
-          <div class="col-12 col-md-4">
+          <div class="col-6 col-md-3">
             <a href="#">
               <div class="">
-                <img src="assets/img/language.jpg" alt="">
-                <h2>Carroll sent home after row with Moyes</h2>
-                <h5 class="category-tag">Football</h5>
+                <img src="assets/img/survey.jpg" alt="">
+                <h2>Poll suggests Facebook's US loyalty intact</h2>
+                <h5 class="category-tag">US & Canada</h5>
               </div>
             </a>
           </div>
 
-          <div class="col-12 col-md-4">
+          <div class="col-6 col-md-3">
             <a href="#">
               <div class="">
-                <img src="assets/img/roma.jpg" alt="">
-                <h2>Roma regret as Liverpool's Salah shines</h2>
-                <h5 class="category-tag">Football</h5>
+                <img src="assets/img/cheating.jpg" alt="">
+                <h2>YouTube removes videos selling cheating</h2>
+                <h5 class="category-tag">Family & Education</h5>
               </div>
             </a>
           </div>
@@ -402,6 +439,7 @@
         you
       </div>
     -->
+    <!--
       <div class="blocks row">
 
         <div class="col-3">
@@ -420,7 +458,7 @@
         </div>
 
       </div>
-
+  -->
       <div class="actual-footer row">
 
         <div class="col-12">
@@ -473,7 +511,10 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
+    <script src="js/bootstrap.min.js">
+
+    </script>
 
 
     <script src="../js/js.js">

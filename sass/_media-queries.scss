@@ -5,36 +5,130 @@
     }
   }
 }
-@media only screen and (min-width:360px) {
-
+@media only screen and (max-width:359px) {
+    .nav{
+      .brand{
+        width: 15%;
+      }
+    }
 }
 
 @media only screen and (min-width:576px) {
+  .weather-bar{
+    .row{
+      .title{
+        display: block;
+      }
+    }
+  }
 
+  #technology-news{
+    .col-12{
+      a{
+        div{
+          img{
+            width: 70%;
+          }
+          h2{
+            font-size: 2.5rem;
+            padding-top: 3rem;
+          }
+        }
+      }
+    }
+  }
 }
 @media only screen and (min-width:768px) {
   .nav{
-    ul{width: 48%;}
+    ul{width: 47%;}
     &.open{
       ul{
         li{
-          width: 33%;
+          width: 33.33%;
         }
       }
     }
     .search{
       padding: 0;
-
-      .glyphicon-search{display: none;}
+      .oi-magnifying-glass{display: none;}
       .search-box{display: block; height: 100%; width: 100%;}
     }
   }
+
+  .weather-bar{
+    .row{
+      .title{
+        h1{font-size:3rem;}
+      }
+    }
+  }
+
+  #technology-news{
+    margin-bottom: 3rem;
+    .col-12{
+      a{
+        div{
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+    .col-6{
+      a{
+        div{
+          height: 100%;
+          h5{
+            bottom: 0;
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
+  .row-container{
+  .standard-3-column-section{
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+    .row{
+      div{
+        a{
+          div{
+            *{padding: 0rem;}
+            img{
+              float: none;
+              max-width: none;
+              width: 100%;
+            }
+            h2,h5{padding: 2rem;}
+            h5{padding-top: 0rem;}
+          }
+        }
+      }
+    }
+  }
+}
+
+
 }
 
 
 @media only screen and (min-width: 992px) {
   #news-headlines{float: left;}
   #sports-headlines{float: right;}
+  #news-headlines, #sports-headlines{
+    div{
+      div{
+        a{
+          div{
+            img{
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
 
   .nav{
     //.ul{width: 55%;}
@@ -51,19 +145,6 @@
 
 //Footer Media Queries
 
-@media only screen and (max-width:400px) {
-  .footer {
-    .actual-footer{
-      div{
-        ul{
-          li{
-            //width: 18rem;
-          }
-        }
-      }
-    }
-  }
-}
 @media only screen and (min-width:400px) {
 
 .nav{

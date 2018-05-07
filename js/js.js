@@ -15,6 +15,27 @@ $(".glyphicon-search").on("click", function(){
   $(".search-box").toggleClass("expand-search");
 })
 
+$(".oi-magnifying-glass").on("click", function(){
+  $(".mobile-search").toggleClass("toggle-mobile-search");
+})
+
+$(".search-box").on('keyup', function(){
+  //console.log("Show Message");
+  //console.log(this.value.length);
+
+  var inputLength = this.value.length;
+
+  if (inputLength > 2) {
+    //console.log("ShowMessage");
+    $(".search-message").css("display","block");
+  }
+  else {
+    //console.log("hide message");
+    $(".search-message").css("display","none");
+  }
+})
+
+
 /*
 jQuery(document).ready(function($){
 
