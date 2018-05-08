@@ -117,12 +117,36 @@
   #news-headlines{float: left;}
   #sports-headlines{float: right;}
   #news-headlines, #sports-headlines{
-    div{
+    .row{
       div{
+        max-height: 118px;
+        margin-bottom: 1rem;
         a{
           div{
+            display: inline-block;
+            height: 100%;
+            // background-color: white;
             img{
               width: 50%;
+              display: block;
+              position: relative;
+              float: left;
+              height: 100%;
+            }
+            .article-info{
+              //background-color: green;
+              width: 50%;
+              display: block;
+              position: relative;
+              float: left;
+              height: 100%;
+              h2{padding: 1rem;}
+              h5{
+                padding: 0;
+                position: absolute;
+                bottom: 0;
+                padding-left: 1rem;
+              }
             }
           }
         }

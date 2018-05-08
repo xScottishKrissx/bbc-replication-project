@@ -1,4 +1,7 @@
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+* {
+  border: 1px solid black; }
+
 a {
   color: black;
   font-family: Helvetica,Arial,freesans,sans-serif; }
@@ -397,8 +400,31 @@ body {
   #sports-headlines {
     float: right; }
 
-  #news-headlines div div a div img, #sports-headlines div div a div img {
-    width: 50%; }
+  #news-headlines .row div, #sports-headlines .row div {
+    max-height: 118px;
+    margin-bottom: 1rem; }
+    #news-headlines .row div a div, #sports-headlines .row div a div {
+      display: inline-block;
+      height: 100%; }
+      #news-headlines .row div a div img, #sports-headlines .row div a div img {
+        width: 50%;
+        display: block;
+        position: relative;
+        float: left;
+        height: 100%; }
+      #news-headlines .row div a div .article-info, #sports-headlines .row div a div .article-info {
+        width: 50%;
+        display: block;
+        position: relative;
+        float: left;
+        height: 100%; }
+        #news-headlines .row div a div .article-info h2, #sports-headlines .row div a div .article-info h2 {
+          padding: 1rem; }
+        #news-headlines .row div a div .article-info h5, #sports-headlines .row div a div .article-info h5 {
+          padding: 0;
+          position: absolute;
+          bottom: 0;
+          padding-left: 1rem; }
 
   .nav .search {
     min-width: 173px;
