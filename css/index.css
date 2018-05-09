@@ -3,7 +3,8 @@ a {
   color: black;
   font-family: Helvetica,Arial,freesans,sans-serif; }
 
-h1, h2 {
+h1,
+h2 {
   font-family: Helvetica,Arial,freesans,sans-serif;
   font-size: 1.7rem;
   font-weight: 700; }
@@ -34,12 +35,17 @@ body {
   position: relative;
   /******************************************************************************/
   /******************************************************************************/ }
-  .nav .brand, .nav .profile, .nav .alerts, .nav .search {
+  .nav .alerts,
+  .nav .brand,
+  .nav .profile,
+  .nav .search {
     border-right: 1px solid #ccc;
     height: 100%;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 1rem; }
+  .nav .profile p {
+    display: none; }
   .nav ul {
     display: flex;
     flex-wrap: wrap;
@@ -51,6 +57,18 @@ body {
   .nav .close-menu {
     height: auto;
     display: none; }
+  .nav #home-btn:hover {
+    background-color: #007bc7; }
+  .nav #news-btn:hover {
+    background-color: #921; }
+  .nav #sport-btn:hover {
+    background-color: #ffd230; }
+  .nav #weather-btn:hover {
+    background-color: #8ce; }
+  .nav #iplayer-btn:hover {
+    background-color: #ed3d7d; }
+  .nav #tv-btn:hover {
+    background-color: #262626; }
   .nav li {
     text-align: center;
     width: 58px; }
@@ -192,7 +210,7 @@ body {
 /******************************************************************************/
 .weather-bar {
   background-color: white;
-  height: 10rem;
+  height: 100%;
   margin-bottom: 2rem; }
   .weather-bar .row {
     height: 100%;
@@ -205,7 +223,7 @@ body {
         padding-top: 1rem;
         margin-top: 0; }
       .weather-bar .row .title h3 {
-        line-height: 0rem; }
+        line-height: 0; }
 
 /******************************************************************************/
 /******************************************************************************/
@@ -227,7 +245,8 @@ body {
     padding: 0;
     background-color: #fff;
     height: 100%; }
-    .top-stories .row div a div h2, .top-stories .row div a div h5 {
+    .top-stories .row div a div h2,
+    .top-stories .row div a div h5 {
       padding: 1rem; }
   .top-stories .row div a .small-box h2 {
     padding-bottom: 2rem; }
@@ -360,16 +379,14 @@ body {
   .footer #terms {
     border-top: 1px solid #ccc;
     line-height: 1.5rem;
-    margin: 0 auto;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 0 1rem;
     max-width: 880px;
     padding-bottom: 3rem;
     padding-top: 3rem; }
 
-@media only screen and (max-width: 453px) {
+@media only screen and (max-width: 480px) {
   .nav ul {
-    width: 0%; } }
+    width: 0; } }
 @media only screen and (max-width: 359px) {
   .nav .brand {
     width: 15%; } }
@@ -393,7 +410,7 @@ body {
     padding-top: 3rem; } }
 @media only screen and (min-width: 768px) {
   .nav ul {
-    width: 47%; }
+    width: 45%; }
   .nav.open ul li {
     width: 33.33%; }
   .nav .search {
@@ -408,10 +425,23 @@ body {
   .weather-bar .row .title h1 {
     font-size: 3rem; }
 
+  #local-news .row .col-md-6 a div,
+  #world-news .row .col-md-6 a div {
+    height: 100%; }
+  #local-news .row .col-md-3 a div,
+  #world-news .row .col-md-3 a div {
+    height: 100%; }
+    #local-news .row .col-md-3 a div h5,
+    #world-news .row .col-md-3 a div h5 {
+      bottom: 0;
+      position: absolute; }
+
   #technology-news {
     margin-bottom: 3rem; }
-    #technology-news .col-12 a div img {
-      width: 100%; }
+    #technology-news .col-12 a div {
+      height: 100%; }
+      #technology-news .col-12 a div img {
+        width: 100%; }
     #technology-news .col-6 a div {
       height: 100%; }
       #technology-news .col-6 a div h5 {
@@ -422,57 +452,66 @@ body {
     margin-bottom: 4rem;
     margin-top: 4rem; }
     .row-container .standard-3-column-section .row div a div * {
-      padding: 0rem; }
+      padding: 0; }
     .row-container .standard-3-column-section .row div a div img {
       float: none;
       max-width: none;
       width: 100%; }
-    .row-container .standard-3-column-section .row div a div h2, .row-container .standard-3-column-section .row div a div h5 {
+    .row-container .standard-3-column-section .row div a div h2,
+    .row-container .standard-3-column-section .row div a div h5 {
       padding: 2rem; }
     .row-container .standard-3-column-section .row div a div h5 {
-      padding-top: 0rem; }
+      padding-top: 0; }
 
   .footer .actual-footer div ul {
     margin: 0 auto; }
   .footer .bottom-links div ul {
     margin: 0 auto; }
     .footer .bottom-links div ul li {
-      padding: 0rem;
-      padding-bottom: 2rem;
-      padding-left: 1rem;
-      padding-top: 2rem; }
-    .footer .bottom-links div ul :nth-child(1) {
-      padding-left: 0rem; }
+      padding: 2rem 0 2rem 1rem; }
   .footer #terms {
     margin: 0 auto; } }
 @media only screen and (min-width: 992px) {
+  .nav ul {
+    width: 36%; }
+  .nav .profile p {
+    display: inline-block;
+    font-family: Helvetica, Arial, sans-serif;
+    padding-left: 0.5rem; }
+
   #news-headlines {
     float: left; }
 
   #sports-headlines {
     float: right; }
 
-  #news-headlines .row div, #sports-headlines .row div {
+  #news-headlines .row div,
+  #sports-headlines .row div {
     max-height: 118px;
     margin-bottom: 1rem; }
-    #news-headlines .row div a div, #sports-headlines .row div a div {
+    #news-headlines .row div a div,
+    #sports-headlines .row div a div {
       display: inline-block;
       height: 100%; }
-      #news-headlines .row div a div img, #sports-headlines .row div a div img {
+      #news-headlines .row div a div img,
+      #sports-headlines .row div a div img {
         width: 50%;
         display: block;
         position: relative;
         float: left;
         height: 100%; }
-      #news-headlines .row div a div .article-info, #sports-headlines .row div a div .article-info {
+      #news-headlines .row div a div .article-info,
+      #sports-headlines .row div a div .article-info {
         width: 50%;
         display: block;
         position: relative;
         float: left;
         height: 100%; }
-        #news-headlines .row div a div .article-info h2, #sports-headlines .row div a div .article-info h2 {
+        #news-headlines .row div a div .article-info h2,
+        #sports-headlines .row div a div .article-info h2 {
           padding: 1rem; }
-        #news-headlines .row div a div .article-info h5, #sports-headlines .row div a div .article-info h5 {
+        #news-headlines .row div a div .article-info h5,
+        #sports-headlines .row div a div .article-info h5 {
           padding: 0;
           position: absolute;
           bottom: 0;
@@ -481,14 +520,16 @@ body {
   .nav .search {
     min-width: 173px;
     width: 100%;
-    max-width: 234.8px; } }
-@media only screen and (min-width: 600px) {
-  .footer .actual-footer div ul li {
-    flex: 1 0 25%; } }
-@media only screen and (min-width: 992px) {
+    max-width: 234.8px; }
+
   .footer .actual-footer div ul li {
     flex: 1 0 15%; }
   .footer .bottom-links div ul {
-    display: block; } }
+    display: block; }
+    .footer .bottom-links div ul :nth-child(1) {
+      padding-left: 0; } }
+@media only screen and (min-width: 600px) {
+  .footer .actual-footer div ul li {
+    flex: 1 0 25%; } }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,4 +1,4 @@
-$(document).ready( function(){
+$(document).ready(function() {
 
 
   $(".x").on("click", function() {
@@ -12,18 +12,18 @@ $(document).ready( function(){
     $(".search").toggleClass("move-search");
   });
 
-  $(".glyphicon-search").on("click", function(){
+  $(".glyphicon-search").on("click", function() {
     $(".glyphicon-search").toggleClass("change-icon");
     $(".search-box").toggleClass("expand-search");
   })
 
-  $(".oi-magnifying-glass").on("click", function(){
+  $(".oi-magnifying-glass").on("click", function() {
     $(".mobile-search").toggleClass("toggle-mobile-search");
   })
 
 
   //Show Live Search Message as you type
-  $(".search-box").on('keyup', function(){
+  $(".search-box").on('keyup', function() {
     //console.log("Show Message");
     //console.log(this.value.length);
     var winWidthOnKeyUp = $(window).width();
@@ -33,46 +33,45 @@ $(document).ready( function(){
 
     if (inputLength > 2 && winWidthOnKeyUp > 768) {
       //console.log("ShowMessage");
-      $(".search-message").css("display","block");
-    }
-    else {
+      $(".search-message").css("display", "block");
+    } else {
       //console.log("hide message");
-      $(".search-message").css("display","none");
+      $(".search-message").css("display", "none");
     }
   })
 
   //Hide live search message when clicking off message and empty form
-  $(".weather-bar, .nav, .row-container").on("click",function(){
+  $(".weather-bar, .nav, .row-container").on("click", function() {
     destroyLiveSearch();
   })
 
   //Hide Live Search message when window re-sizes
-  $(window).resize(function(){
+  $(window).resize(function() {
     var winWidthOnResize = $(window).width();
     //console.log(winWidthOnResize);
 
     if (winWidthOnResize < 768) {
-        destroyLiveSearch();
+      destroyLiveSearch();
     }
 
     //Show & Hide Mobile Search if window resizes.
     if (winWidthOnResize > 768) {
       //$(".mobile-search").toggleClass("toggle-mobile-search");
       $(".mobile-search").css("display", "none");
-    }else {
+    } else {
       $(".mobile-search").css("display", "table");
     }
 
   })
 
-//Pointless Get Todays Date Task
+  //Pointless Get Todays Date Task
   var today = new Date();
 
   var dd = today.getDate();
   var mm = today.getMonth() + 1;
   var yyyy = today.getFullYear();
 
-  if (dd<10) {
+  if (dd < 10) {
     //dd = '0' + dd;
   }
 
@@ -80,14 +79,18 @@ $(document).ready( function(){
     //mm = '0' + mm;
   }
 
-  function getDayName(dateStr, locale){
+  function getDayName(dateStr, locale) {
     var date2 = new Date(dateStr);
-    return date2.toLocaleDateString(locale, {weekday: 'long'});
+    return date2.toLocaleDateString(locale, {
+      weekday: 'long'
+    });
   }
 
-  function getMonthName(monthStr, locale){
-    var monthName = new Date (dateStr);
-    return monthName.toLocaleDateString(locale, {month:'long'});
+  function getMonthName(monthStr, locale) {
+    var monthName = new Date(dateStr);
+    return monthName.toLocaleDateString(locale, {
+      month: 'long'
+    });
   }
 
   var dateStr = today;
@@ -96,13 +99,13 @@ $(document).ready( function(){
   //console.log(day);
   //console.log(month);
 
-  var today = day + ',' + ' ' + dd + ' '+ month;
+  var today = day + ',' + ' ' + dd + ' ' + month;
   document.getElementById("todaysDate").innerHTML = today;
   //console.log(today);
 })
 
-function destroyLiveSearch(){
-  $(".search-message").css("display","none");
+function destroyLiveSearch() {
+  $(".search-message").css("display", "none");
   $(".search-box").val("");
 }
 

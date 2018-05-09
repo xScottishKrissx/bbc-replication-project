@@ -2,16 +2,17 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
-*{
-    //border: 1px solid black;
+* {
+  //border: 1px solid black;
 }
+
 a {
   color: black;
   font-family: Helvetica,Arial,freesans,sans-serif;
-
 }
 
-h1,h2 {
+h1,
+h2 {
   font-family: Helvetica,Arial,freesans,sans-serif;
   font-size: 1.7rem;
   font-weight: 700;
@@ -20,17 +21,27 @@ h1,h2 {
 img {
   width: 100%;
 }
-body{
+
+body {
   background-color: $grey;
 }
-.display-block{display: block;}
-.display-none{display: none;}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
 /******************************************************************************/
 /////////////////////////////// NAVBAR /////////////////////////////////////////
 /******************************************************************************/
+.nav-wrapper {
+  background-color: $white;
+  border-bottom: 1px solid #ccc;
+}
 
-.nav-wrapper{background-color:$white; border-bottom: 1px solid #ccc;}
-.nav{
+.nav {
   background-color: $white;
   //border-bottom: 1px solid black;
   height: 4rem;
@@ -38,7 +49,10 @@ body{
   margin: 0 auto;
   position: relative;
 
-  .brand, .profile, .alerts, .search{
+  .alerts,
+  .brand,
+  .profile,
+  .search {
     border-right: 1px solid #ccc;
     //height: 3rem;
     height: 100%;
@@ -48,7 +62,13 @@ body{
     padding-top: 1rem;
   }
 
-  ul{
+  .profile {
+    p {
+      display: none;
+    }
+  }
+
+  ul {
     display: flex;
     flex-wrap: wrap;
     height: 3.99rem;
@@ -58,31 +78,73 @@ body{
     padding: 0;
     width: 43%;
     //width: 50px;
-
   }
-  .close-menu{
+
+  .close-menu {
     height: auto;
     display: none;
   }
-  li{
+
+  #home-btn {
+    &:hover {
+      background-color: #007bc7;
+    }
+  }
+
+  #news-btn {
+    &:hover {
+      background-color: #921;
+    }
+  }
+
+  #sport-btn {
+    &:hover {
+      background-color: #ffd230;
+    }
+  }
+
+  #weather-btn {
+    &:hover {
+      background-color: #8ce;
+    }
+  }
+
+  #iplayer-btn {
+    &:hover {
+      background-color: #ed3d7d;
+    }
+  }
+
+  #tv-btn {
+    &:hover {
+      background-color: #262626;
+    }
+  }
+
+  li {
     //border-right: 1px solid black;
     text-align: center;
     width: 58px;
-    &:hover{
+
+    &:hover {
       background-color: #333;
-      a{
+
+      a {
         color: $white;
       }
     }
-    a{
+
+    a {
       display: block;
       padding: 1rem 0.5rem;
+      //font-size: 1.3rem;
       text-decoration: none;
       white-space: nowrap;
     }
   }
-  &.open{
-    ul{
+
+  &.open {
+    ul {
       background-color: $white;
       border-bottom: 10px solid #333;
       display: block;
@@ -93,27 +155,34 @@ body{
       width: 100%;
       z-index: 10000;
       //transition: all 1s;
-      .close-menu{
+      .close-menu {
         background-color: black;
         color: white;
         display: block;
         width: 100%;
-        a{color: white;}
+
+        a {
+          color: white;
+        }
       }
-      li{
+
+      li {
         float: left;
         padding: 1rem;
         width: 50%;
-        &:hover{
+
+        &:hover {
           background-color: #333;
-          a{
+
+          a {
             color: $white;
           }
         }
       }
     }
   }
-  .x{
+
+  .x {
     border-left: 2px solid #ccc;
     border-right: 1px solid #ccc;
     cursor: pointer;
@@ -121,49 +190,54 @@ body{
     padding: 1rem;
     position: relative;
     transition: all 1s;
-    &:hover{
+
+    &:hover {
       border-bottom: 5px solid #333;
     }
-    span{
+
+    span {
       // bottom: 0;
       // position: absolute;
       // right: 0;
       // top: 1.5rem;
-
     }
-  //  position: absolute;
-  //  right:0.75rem;
-  //  top: 0.75rem;
+    //  position: absolute;
+    //  right:0.75rem;
+    //  top: 0.75rem;
   }
-
-/******************************************************************************/
-/////////////////////////////// NAV > SEARCH BAR////////////////////////////////
-/******************************************************************************/
-  .search{
-    border:none;
+  /******************************************************************************/
+  /////////////////////////////// NAV > SEARCH BAR////////////////////////////////
+  /******************************************************************************/
+  .search {
+    border: none;
     cursor: pointer;
     height: 100%;
     z-index: 1000;
 
+    .live-search-list {
+      display: block;
+      width: 100%;
+    }
 
-
-    .live-search-list{display: block;
-    width: 100%;}
-    .search-box{
-      border:none;
+    .search-box {
+      border: none;
       display: none;
       padding-left: 1rem;
-      &:focus{outline: none;}
+
+      &:focus {
+        outline: none;
+      }
     }
-    .oi-magnifying-glass{
+
+    .oi-magnifying-glass {
       height: 100%;
       position: absolute;
       font-size: 2rem;
       padding-top: 1rem;
     }
-
   }
-  .change-icon{
+
+  .change-icon {
     position: absolute;
     right: 0;
     width: 100%;
@@ -175,7 +249,8 @@ body{
     padding-top: 1rem;
     outline: 1px solid #333;
   }
-  .expand-search{
+
+  .expand-search {
     background-color: #333;
     color: white;
     display: block !important;
@@ -185,19 +260,19 @@ body{
     position: absolute;
     text-align: center;
     top: 0;
-    width: 100% ;
-
+    width: 100%;
   }
-  .move-search{
-    background-color: red;
 
+  .move-search {
+    background-color: red;
     position: absolute;
     top: 40rem;
     width: 100%;
     z-index: 100;
   }
 }
-.search-message{
+
+.search-message {
   background-color: $white;
   border-bottom: 1px solid #333;
   border-top: 2px solid black;
@@ -209,27 +284,27 @@ body{
 /******************************************************************************/
 /////////////////////////////// NAV > MOBILE SEARCH ////////////////////////////
 /******************************************************************************/
-.mobile-search{
+
+.mobile-search {
   background-color: #333;
   cursor: default;
   display: table;
   height: 20rem;
   left: 0;
   margin: 0 auto;
-  max-width:$max-content-width;
+  max-width: $max-content-width;
   position: absolute;
   top: -50rem;
   width: 100%;
   z-index: 10000;
-
   transition: top 0.25s;
 
-  .mobile-search-inner-container{
+  .mobile-search-inner-container {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
 
-    .mobile-search-input{
+    .mobile-search-input {
       border: 0;
       font-size: 3rem;
       height: 10rem;
@@ -237,63 +312,60 @@ body{
       text-align: center;
       width: 90%;
     }
-    .submit-mobile-search{
-      border:0;
+
+    .submit-mobile-search {
+      border: 0;
       height: 4rem;
       padding: 0;
       width: 90%;
     }
   }
 }
-.toggle-mobile-search{
+
+.toggle-mobile-search {
   top: 4rem;
 }
 /******************************************************************************/
 /////////////////////////////// WEATHER //// ///////////////////////////////////
 /******************************************************************************/
-.weather-bar{
-  background-color:white;
-  height: 10rem;
+
+.weather-bar {
+  background-color: white;
+  //height: 10rem;
+  height: 100%;
   margin-bottom: 2rem;
 
-  .row{
+  .row {
     height: 100%;
     max-width: 880px;
     margin: 0 auto;
-    .title{
+
+    .title {
       display: none;
-      h1{
+
+      h1 {
         font-size: 2rem;
         padding-top: 1rem;
         margin-top: 0;
       }
-      h3{
-        line-height: 0rem;
-      }
 
+      h3 {
+        line-height: 0;
+      }
     }
-  //  :nth-child(2){background-color: blue;}
+    //  :nth-child(2){background-color: blue;}
   }
 }
-
-
-
-
-
-
-
-
 /******************************************************************************/
 /////////////////////////////// MAIN CONTENT ///////////////////////////////////
 /******************************************************************************/
-
 .container {
   background-color: yellow;
   border: 1px solid black;
   max-width: $max-content-width !important;
 }
 
-.category-tag{
+.category-tag {
   color: rgb(130, 130, 130);
   text-transform: uppercase;
 }
@@ -306,6 +378,7 @@ body{
       margin-bottom: 1rem;
       padding-left: 5px;
       padding-right: 5px;
+
       a {
         div {
           padding: 0;
@@ -313,51 +386,67 @@ body{
           background-color: $white;
           height: 100%;
 
-          h2,h5{padding: 1rem;}
+          h2,
+          h5 {
+            padding: 1rem;
+          }
         }
-        .small-box {
-        //  border: 1px solid red;
 
-          h2{padding-bottom: 2rem;}
-          h5{
+        .small-box {
+          //  border: 1px solid red;
+          h2 {
+            padding-bottom: 2rem;
+          }
+
+          h5 {
             position: absolute;
             bottom: 0;
           }
         }
       }
-
     }
   }
 }
-.standard-3-column-section{
+
+.standard-3-column-section {
   @include standard-3-column-section;
 }
 
-.row-container{
-  div{
+.row-container {
+  div {
     margin: 0 auto;
     max-width: $max-content-width;
     padding-left: 1px;
     padding-right: 1px;
   }
 }
-.row-container{
-  .test{
+
+.row-container {
+  .test {
     max-width: $max-content-width;
     margin: 0 auto;
-    div{
 
-    }
+    div {}
   }
 }
-#local-news{clear: both;}
-#news-headlines{float: none;}
-#sports-headlines{float: none;}
-#technology-news{
-  div{
-    a{
-      div{
-        img{
+
+#local-news {
+  clear: both;
+}
+
+#news-headlines {
+  float: none;
+}
+
+#sports-headlines {
+  float: none;
+}
+
+#technology-news {
+  div {
+    a {
+      div {
+        img {
           width: 100%;
           max-width: none;
         }
@@ -365,57 +454,60 @@ body{
     }
   }
 }
-
-
 /******************************************************************************/
 /////////////////////////////// FOOTER /////////////////////////////////////////
 /******************************************************************************/
-.footer{
+
+.footer {
   //height: 400px;
   background-color: #4c4c4c;
   color: white;
-  .white-area{
+
+  .white-area {
     background-color: white;
     color: black;
     height: 200px;
-
   }
-  .blocks{
+
+  .blocks {
     background-image: url("../assets/img/background-footer.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
     max-width: $max-content-width;
     margin: 0 auto;
-    div{
+
+    div {
       background-color: #383838;
       padding-left: 8px;
       padding-right: 8px;
     }
   }
-  .actual-footer{
+
+  .actual-footer {
     @include footer-format;
   }
-  .bottom-links{
+
+  .bottom-links {
     @include footer-format;
-    div{
-      ul{
+
+    div {
+      ul {
         border-bottom: 0;
-        li{
-          border:none;
+
+        li {
+          border: none;
           flex: 1 0 50%;
           font-size: 1.3rem;
         }
       }
     }
   }
-  #terms{
+
+  #terms {
     border-top: 1px solid #ccc;
     line-height: 1.5rem;
-    margin: 0 auto;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 0 1rem;
     max-width: 880px;
     padding-bottom: 3rem;
     padding-top: 3rem;
